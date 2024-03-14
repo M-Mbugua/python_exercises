@@ -1,0 +1,13 @@
+# Question: Please download the attached ZIP file 'subdirs.zip'. Inside the ZIP file,
+# there's a directory named subdirs. That directory contains other directories
+# inside. Please write a script that counts the number of .py files contained
+# inside subdirs and all its sub-directories.
+# Expected output:
+#
+#     3
+
+import glob
+
+files = glob.glob('subdirs/**/*.py', recursive= True)
+
+print(len(files))
